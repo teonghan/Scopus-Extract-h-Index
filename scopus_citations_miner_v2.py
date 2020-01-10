@@ -11,10 +11,10 @@ import math
 
 driver = webdriver.Chrome(executable_path='c:/chromedriver')
 
-# dataframe
+# [EDIT] dataframe from input xlsx
 df = pd.read_excel('')
 
-# login
+# [EDIT] login information to Scopus.com
 u = ''
 p = ''
 
@@ -36,7 +36,6 @@ for index, row in df.iterrows():
         NUM_PUBS = 0
         CITES = 0
         HINDEX = 0
-        CITES_5 = 0
         HINDEX_SELF = 0
 
         for i in range(0, len(links)):
@@ -110,7 +109,6 @@ for index, row in df.iterrows():
             df.loc[index, 'Num Pub'] = NUM_PUBS
             df.loc[index, 'Citations'] = CITES
             df.loc[index, 'h-index'] = HINDEX
-            df.loc[index, '5-Years-Citations'] = CITES_5
             df.loc[index, 'h-index_self'] = HINDEX_SELF
 
     except:
@@ -119,6 +117,7 @@ for index, row in df.iterrows():
 driver.close()
 driver.quit()
 
+# output
 out_file = 'out.xlsx'
 writer = pd.ExcelWriter(out_file)
 df.to_excel(writer, sheet_name='out')
