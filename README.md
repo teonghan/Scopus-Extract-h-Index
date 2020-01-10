@@ -7,3 +7,6 @@ An input file (Excel xlsx) must be prepared before hand with at least the follow
 
 # Requirements
 Python 3, Pandas, Selenium
+
+# General Notes
+There is even more efficient way of doing this, by using Scopus API. For more detail, please visit https://dev.elsevier.com/
