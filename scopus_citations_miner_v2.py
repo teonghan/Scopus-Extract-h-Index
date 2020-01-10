@@ -93,7 +93,8 @@ for index, row in df.iterrows():
             except:
                 hindex_self = 0
                 pass
-
+            
+            # throw a warning if the scopus link get redirect somewhere else
             if scopus_id != info:
                 print('[WARN] SCOPUS_ID_REDIRECT: %s' % scopus_id)
 
