@@ -9,4 +9,5 @@ An input file (Excel xlsx) must be prepared before hand with at least the follow
 Python 3, Pandas, Selenium
 
 # General Notes
-There is even more efficient way of doing this, by using Scopus API. For more detail, please visit https://dev.elsevier.com/
+1. There is even more efficient way of doing this, by using Scopus API. For more detail, please visit https://dev.elsevier.com/
+2. The script is not perfect. Sometimes, perhaps due to the connection to Scopus.com, things like timeout, pending javascript rendering, etc. will resulted in certain indicators to be set to zero (I took the easy route to just catch all Exception and reset them indicators to zero). It is important to go through the output after finished mining and fix these errors manually.
